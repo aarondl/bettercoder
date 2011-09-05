@@ -14,7 +14,6 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
-  gem 'database_cleaner'
   gem 'pickle'
   gem 'factory_girl_rails'
   gem 'capybara'
@@ -31,7 +30,3 @@ end
 
 gem 'jquery-rails'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
