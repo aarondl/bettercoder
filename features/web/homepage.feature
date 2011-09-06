@@ -5,6 +5,6 @@ Feature: Homepage
   I want to be able to get to the homepage
 
   Scenario: Browsing the web 
-    When I enter the base url
+    When I go to the homepage 
     Then I should see the homepage
 

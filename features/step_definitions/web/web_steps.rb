@@ -1,8 +1,8 @@
-When /^I enter the base url$/ do
-  visit '/'
+When /^I go to (.+)$/ do |page_name|
+  visit path_to(page_name)
 end
 
-Then /^I should see the homepage$/ do
-  current_path.should == '/'
+Then /^I should see (.+)$/ do |page_name|
+  current_path.should == path_to(page_name)
 end
 
