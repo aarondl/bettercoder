@@ -71,6 +71,10 @@ GEM
       factory_girl (~> 2.1.0)
       railties (>= 3.0.0)
     ffi (1.0.9)
+    formtastic (1.2.4)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
     gherkin (2.4.16)
       json (>= 1.4.6)
     haml (3.1.2)
@@ -186,6 +190,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   factory_girl_rails
+  formtastic
   haml
   haml-rails
   jquery-rails

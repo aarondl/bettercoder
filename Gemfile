@@ -4,6 +4,7 @@ gem 'rails', '3.1.0'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'formtastic'
 
 gem 'mongoid'
 gem 'bson_ext'
