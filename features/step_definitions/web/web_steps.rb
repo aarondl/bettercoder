@@ -1,6 +1,6 @@
 Given /^It's a fresh site$/ do
   siteconfig = SiteConfig.any_of
-  siteconfig.should != nil
+  siteconfig.should_not == nil
 end
 
 When /^I go to (.+)$/ do |page_name|
