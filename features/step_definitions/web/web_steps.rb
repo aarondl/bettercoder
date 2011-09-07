@@ -1,6 +1,10 @@
-Given /^It's a fresh site$/ do
+Given /^It's a (fresh|stale) site$/ do |state|
   siteconfig = SiteConfig.any_of
-  siteconfig.should_not == nil
+  if state == 'fresh'
+    siteconfig.should == nil
+  elsif state == 'stale'
+    siteconfig.should_not == nil
+  end
 end
 
 When /^I go to (.+)$/ do |page_name|
