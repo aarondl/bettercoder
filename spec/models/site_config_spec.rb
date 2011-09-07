@@ -9,15 +9,13 @@ describe SiteConfig do
     salt = 'cookies'
     pwdhash = 'abcedf'
 
-    SiteConfig.new(
-      fname: fname,
-      lname: lname,
-      email: email,
-      salt: salt,
-      pwdhash: pwdhash 
+    SiteConfig.create(
+      fname: fname, lname: lname, email: email,
+      salt: salt, pwdhash: pwdhash 
     )
 
-    site_config = SiteConfig.first
+    site_config = SiteConfig.first()
+    site_config.should_not == nil
 
     site_config.fname.should == fname 
     site_config.lname.should == lname
