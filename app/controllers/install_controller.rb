@@ -1,6 +1,4 @@
-class InstallController < ActionController::Base
-  protect_from_forgery
-
+class InstallController < ApplicationController
   def index
   end
 
@@ -8,3 +6,4 @@ class InstallController < ActionController::Base
   end
 
 end
+

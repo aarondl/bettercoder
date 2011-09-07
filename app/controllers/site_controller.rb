@@ -1,6 +1,4 @@
-class SiteController < ActionController::Base
-  protect_from_forgery
-
+class SiteController < ApplicationController
   def index
   end
 end
