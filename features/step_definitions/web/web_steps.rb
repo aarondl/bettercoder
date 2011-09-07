@@ -1,9 +1,7 @@
 Given /^It's a (fresh|stale) site$/ do |state|
-  siteconfig = SiteConfig.any_of
-  if state == 'fresh'
-    siteconfig.should == nil
-  elsif state == 'stale'
-    siteconfig.should_not == nil
+  if state == 'stale'
+    SiteConfig.create
+    SiteConfig.first.should_not == nil
   end
 end
 
