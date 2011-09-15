@@ -2,9 +2,9 @@
 %html
   %head
     = stylesheet_link_tag 'site'
+    = stylesheet_link_tag 'install'
     = yield :head
   %body
     = yield
-
+    
   = javascript_include_tag 'jquery'
-  = javascript_include_tag 'site'

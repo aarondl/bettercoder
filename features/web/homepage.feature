@@ -6,5 +6,5 @@ Feature: Homepage
 
   Scenario: Browsing the web 
     When I go to the homepage 
-    Then I should see the homepage
+    Then I should be viewing the homepage
 

@@ -8,13 +8,13 @@ Feature: Site installation
   Scenario: Accessing the install page on a fresh site
     Given It's a fresh site
     When I go to the install page 
-    Then I should see the install page
+    Then I should be viewing the install page
 
   @web @important
   Scenario: Accessing the install page on an already set-up site
-    Given It's a stale site
+    Given It's a set-up site
     When I go to the install page
-    Then I should see the homepage 
+    Then I should be viewing the homepage 
 
   @web
   Scenario: Installing a site

@@ -1,2 +1,10 @@
-%h1 Install#new
-%p Find me in app/views/install/new.html.haml
+%h1 Site Installation
+= semantic_form_for @siteinfo do |form|
+  = form.inputs do
+    = form.input :fname, :label => 'First name:'
+    = form.input :lname, :label => 'Last name:'
+    = form.input :email, :label => 'E-mail address:'
+    = form.input :password, :label => 'Password:'
+    = form.input :password_confirmation, :label => 'Confirm password:'
+  = form.buttons do
+    = form.commit_button :label => 'Install'
