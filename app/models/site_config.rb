@@ -6,5 +6,8 @@ class SiteConfig
   field :email, :type => String
   field :salt, :type => String
   field :password, :type => String
-  validates :password, :confirmation => true
+  validates :fname, :presence => true
+  validates :lname, :presence => true
+  validates :email, :presence => true
+  validates :password, :confirmation => true, :presence => true
 end
