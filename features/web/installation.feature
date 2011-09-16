@@ -22,3 +22,10 @@ Feature: Site installation
     When I go to the install page
     And I enter the install form details
     Then I should see a success message
+
+  Scenario: Messing up while Installing a site
+    Given It's a fresh site
+    When I go to the install page
+    And I enter some install form details
+    Then I should see a failure message
+

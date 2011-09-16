@@ -1,6 +1,6 @@
 Given /^It's a (fresh|set-up) site$/ do |state|
   if state == 'set-up'
-    SiteConfig.create
+    Factory.create(:siteconfig) 
     SiteConfig.first.should_not == nil
   end
 end
