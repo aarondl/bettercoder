@@ -5,5 +5,5 @@ class SiteConfig
   field :lname, :type => String
   field :email, :type => String
   field :salt, :type => String
-  field :pwdhash, :type => String
+  field :password, :type => String
 end

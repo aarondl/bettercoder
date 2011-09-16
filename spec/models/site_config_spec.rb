@@ -3,24 +3,18 @@ require 'spec_helper'
 describe SiteConfig do
 
   it 'can be saved and retrieved' do
-    fname = 'Test'
-    lname = 'Root'
-    email = 'test@root.com'
-    salt = 'cookies'
-    pwdhash = 'abcedf'
-
-    SiteConfig.create(
-      fname: fname, lname: lname, email: email,
-      salt: salt, pwdhash: pwdhash 
-    )
-
-    site_config = SiteConfig.first()
-    site_config.should_not == nil
-
-    site_config.fname.should == fname 
-    site_config.lname.should == lname
-    site_config.email.should == email
-    site_config.salt.should == salt
-    site_config.pwdhash.should == pwdhash
+    f = Factory.create(:siteconfig)
+    f = nil
+    f.should be_nil
+    f = SiteConfig.first
+    o = Factory.build(:siteconfig)
+    f.should_not be_nil
+    o.should_not be_nil
+    f.fname.should eq(o.fname)
+    f.lname.should eq(o.lname)
+    f.email.should eq(o.email)
+    f.salt.should eq(o.salt)
+    f.password.should eq(o.password)
   end
 end
+
