@@ -16,5 +16,14 @@ describe SiteConfig do
     f.salt.should eq(o.salt)
     f.password.should eq(o.password)
   end
+
+  it 'should confirm passwords' do
+    expect {
+      Factory.create(
+        :siteconfig,
+        :password_confirmation => 'lol'
+      )
+    }.to raise_error(Mongoid::Errors::Validations)
+  end
 end
 
