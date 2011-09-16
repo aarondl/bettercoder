@@ -25,5 +25,21 @@ describe SiteConfig do
       )
     }.to raise_error(Mongoid::Errors::Validations)
   end
+
+  it 'should require all fields except salt' do
+    expect {
+      Factory.create(
+        :siteconfig,
+        :fname => '', :lname => '', :email => '',
+        :password => '', :password_confirmation => ''
+      )
+    }.to raise_error(Mongoid::Errors::Validations)
+    expect {
+      Factory.create(
+        :siteconfig,
+        :salt => ''
+      )
+    }.to_not raise_error(Mongoid::Errors::Validations)
+  end
 end
 
