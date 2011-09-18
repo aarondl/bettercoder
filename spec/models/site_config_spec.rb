@@ -47,5 +47,11 @@ describe SiteConfig do
     b = Factory.build(:siteconfig)
     a.password.should_not eq(b.password)
   end
+
+  it 'should force emails to be valid' do
+    expect {
+      Factory.create(:siteconfig, :email => 'lol')
+    }.to raise_error(Mongoid::Errors::Validations)
+  end
 end
 
