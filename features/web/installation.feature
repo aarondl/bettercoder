@@ -23,6 +23,7 @@ Feature: Site installation
     And I enter the install form details
     Then I should see a success message
 
+  @web
   Scenario: Messing up while Installing a site
     Given It's a fresh site
     When I go to the install page

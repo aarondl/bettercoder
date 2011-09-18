@@ -2,11 +2,12 @@ class InstallController < ApplicationController
   before_filter :require_fresh_site
 
   def create
-    SiteConfig.create(params[:siteconfig])
+    @siteinfo = SiteConfig.new(params[:site_config])
+    render :new unless @siteinfo.save
   end
 
   def new
-    @siteinfo = SiteConfig.new
+    @siteinfo = SiteConfig.new if @siteinfo == nil
   end
 
   private

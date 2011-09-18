@@ -13,7 +13,7 @@ Then /^I should see a (failure|success) message$/ do |msg|
   if msg == 'success'
     page.should have_content('Congratulations')
   else
-    page.should have_content('Error')
+    page.should have_content('E-mail can\'t be blank')
   end
 end
 

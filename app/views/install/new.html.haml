@@ -1,10 +1,10 @@
 %h1 Site Installation
-= semantic_form_for @siteinfo do |form|
-  = form.inputs do
-    = form.input :fname, :label => 'First name:'
-    = form.input :lname, :label => 'Last name:'
-    = form.input :email, :label => 'E-mail address:'
-    = form.input :password, :label => 'Password:'
-    = form.input :password_confirmation, :label => 'Confirm password:'
-  = form.buttons do
-    = form.commit_button :label => 'Install'
+= simple_form_for @siteinfo do |f|
+  = error_messages_for @siteinfo
+  = f.input :fname, :label => 'First name:'
+  = f.input :lname, :label => 'Last name:'
+  = f.input :email, :label => 'E-mail address:'
+  = f.input :password, :label => 'Password:'
+  = f.input :password_confirmation, :label => 'Confirm password:'
+  = f.submit 'Install'
+
