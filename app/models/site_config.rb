@@ -2,6 +2,8 @@ class SiteConfig
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  Email_regex = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i
+
   before_save :hash_password
 
   field :fname, :type => String
@@ -11,8 +13,11 @@ class SiteConfig
   field :password, :type => String
   validates :fname, :presence => { :message => '^First name can\'t be blank' }
   validates :lname, :presence => { :message => '^Last name can\'t be blank' }
-  validates :email, :presence => { :message => '^E-mail can\'t be blank' }
-  validates :password, :confirmation => { :message => '^Password must match confirmation' },
+  validates :email,
+    :presence => { :message => '^E-mail can\'t be blank' },
+    :format => { :with => Email_regex, :message => '^E-mail must be a valid e-mail address' }
+  validates :password,
+    :confirmation => { :message => '^Password must match confirmation' },
     :presence => { :message => '^Password can\'t be blank' }
 
   protected
