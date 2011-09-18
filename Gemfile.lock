@@ -1,6 +1,7 @@
 GIT
   remote: git@github.com:aarondl/simple_form.git
-  revision: 1c052dd52489046af51c3a3a20e821b644fb795d
+  revision: bcb26b91074af17a94a2f42f83baac61e2295891
+  branch: dynamic_form_friendly
   specs:
     simple_form (2.0.0.dev)
       actionpack (~> 3.0)

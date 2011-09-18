@@ -4,7 +4,7 @@ gem 'rails', '3.1.0'
 
 gem 'haml'
 gem 'haml-rails'
-gem 'simple_form', :git => 'git@github.com:aarondl/simple_form.git'
+gem 'simple_form', :git => 'git@github.com:aarondl/simple_form.git', :branch => 'dynamic_form_friendly'
 gem 'dynamic_form'
 
 gem 'mongoid'
@@ -32,3 +32,4 @@ end
 
 gem 'jquery-rails'
 
+:q
