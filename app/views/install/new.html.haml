@@ -1,0 +1,10 @@
+%h1 Site Installation
+= simple_form_for @siteinfo do |f|
+  = error_messages_for @siteinfo
+  = f.input :fname, :label => 'First name:'
+  = f.input :lname, :label => 'Last name:'
+  = f.input :email, :label => 'E-mail address:'
+  = f.input :password, :label => 'Password:'
+  = f.input :password_confirmation, :label => 'Confirm password:'
+  = f.submit 'Install'
+

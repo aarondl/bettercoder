@@ -4,6 +4,8 @@ gem 'rails', '3.1.0'
 
 gem 'haml'
 gem 'haml-rails'
+gem 'simple_form', :git => 'git@github.com:aarondl/simple_form.git', :branch => 'dynamic_form_friendly'
+gem 'dynamic_form'
 
 gem 'mongoid'
 gem 'bson_ext'
@@ -14,7 +16,6 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
-  gem 'database_cleaner'
   gem 'pickle'
   gem 'factory_girl_rails'
   gem 'capybara'
@@ -31,7 +32,4 @@ end
 
 gem 'jquery-rails'
 
-group :test do
-  # Pretty printed test output
-  gem 'turn', :require => false
-end
+:q

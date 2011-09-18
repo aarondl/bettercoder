@@ -1,0 +1,10 @@
+!!! 5
+%html
+  %head
+    = stylesheet_link_tag 'site'
+    = yield :head
+  %body
+    = yield
+
+  = javascript_include_tag 'jquery'
+  = javascript_include_tag 'site'
