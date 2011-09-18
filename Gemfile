@@ -4,7 +4,8 @@ gem 'rails', '3.1.0'
 
 gem 'haml'
 gem 'haml-rails'
-gem 'formtastic'
+gem 'simple_form', :git => 'git@github.com:aarondl/simple_form.git'
+gem 'dynamic_form'
 
 gem 'mongoid'
 gem 'bson_ext'
