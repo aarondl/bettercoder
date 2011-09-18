@@ -9,6 +9,7 @@ gem 'dynamic_form'
 
 gem 'mongoid'
 gem 'bson_ext'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 gem 'rspec-rails', :group => [:development, :test]
 
