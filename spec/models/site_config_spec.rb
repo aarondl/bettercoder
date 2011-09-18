@@ -13,8 +13,8 @@ describe SiteConfig do
     f.fname.should eq(o.fname)
     f.lname.should eq(o.lname)
     f.email.should eq(o.email)
-    f.salt.should eq(o.salt)
-    f.password.should eq(o.password)
+    f.salt.should_not eq(o.salt)
+    f.password.should_not eq(o.password)
   end
 
   it 'should confirm passwords' do
@@ -40,6 +40,12 @@ describe SiteConfig do
         :salt => ''
       )
     }.to_not raise_error(Mongoid::Errors::Validations)
+  end
+
+  it 'should store passwords as a hash' do
+    a = Factory.create(:siteconfig)
+    b = Factory.build(:siteconfig)
+    a.password.should_not eq(b.password)
   end
 end
 
