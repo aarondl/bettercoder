@@ -30,3 +30,10 @@ Feature: Site installation
     And I enter some install form details
     Then I should see a failure message
 
+  @web
+  Scenario: Invalid e-mail address entry
+    Given It's a fresh site
+    When I go to the install page
+    And I enter bad install form details
+    Then I should see an error that says: E-mail must be a valid e-mail address
+
