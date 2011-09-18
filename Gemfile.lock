@@ -190,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt-ruby
   bson_ext
   capybara
   coffee-rails (~> 3.1.0)
