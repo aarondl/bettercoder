@@ -1,7 +1,7 @@
 @web
 Feature: Site installation
   In order to set up the site
-  As an administrator
+  As an overlord
   I want to be able to access the install page
 
   @web
