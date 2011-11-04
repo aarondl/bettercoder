@@ -30,7 +30,6 @@ Feature: Logging in
     And I am viewing the homepage
     When I click log out
     Then I should be viewing the homepage
-    And I should not see my username
     And I should not have a login cookie
     And I should see a logged out message
 
