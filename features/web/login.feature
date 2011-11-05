@@ -7,6 +7,7 @@ Feature: Logging in
   @web
   Scenario: Logging in
     Given I am not logged in
+    And It's a set-up site
     When I go to the log in page
     And I enter my log in details
     Then I should be viewing the overlord dashboard
@@ -27,7 +28,7 @@ Feature: Logging in
   @web
   Scenario: Logging out
     Given I am logged in
-    And I am viewing the homepage
+    And I am viewing the overlord dashboard
     When I click log out
     Then I should be viewing the homepage
     And I should not have a login cookie

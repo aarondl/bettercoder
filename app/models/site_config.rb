@@ -20,6 +20,11 @@ class SiteConfig
     :confirmation => { :message => '^Password must match confirmation' },
     :presence => { :message => '^Password can\'t be blank' }
 
+  def self.verify_password(authority, siteconfig)
+    return false if authority.nil?
+    return BCrypt::Engine.hash_secret(siteconfig.password, authority.salt) == authority.password
+  end
+
   protected
   def hash_password
     if self.password != nil

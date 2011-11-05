@@ -1,0 +1,2 @@
+module Overlord::DashboardHelper
+end
