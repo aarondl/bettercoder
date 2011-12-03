@@ -53,5 +53,13 @@ describe SiteConfig do
       Factory.create(:siteconfig, :email => 'lol')
     }.to raise_error(Mongoid::Errors::Validations)
   end
+
+  it "should verify siteconfigs to see if they have the right pwd" do
+    a = Factory.create(:siteconfig)
+    b = Factory.build(:siteconfig, :salt => nil, :fname => nil, :lname => nil)
+    c = Factory.build(:siteconfig, :password => 'insanity', :salt => nil, :fname => nil, :lname => nil)
+    SiteConfig::verify_password(a, b).should be_true
+    SiteConfig::verify_password(a, c).should be_false
+  end
 end
 

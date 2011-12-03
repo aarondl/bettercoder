@@ -12,6 +12,12 @@ module NavigationHelpers
       '/'
     when /^the install page$/
       '/install'
+    when /^the log out page$/
+      '/overlord/logout'
+    when /^the log in page$/
+      '/overlord/login'
+    when /^the overlord dashboard$/
+      '/overlord/dashboard'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

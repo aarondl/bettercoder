@@ -1,7 +1,7 @@
 @web
 Feature: Site installation
   In order to set up the site
-  As an administrator
+  As an overlord
   I want to be able to access the install page
 
   @web
@@ -29,4 +29,11 @@ Feature: Site installation
     When I go to the install page
     And I enter some install form details
     Then I should see a failure message
+
+  @web
+  Scenario: Invalid e-mail address entry
+    Given It's a fresh site
+    When I go to the install page
+    And I enter bad install form details
+    Then I should see an error that says: E-mail must be a valid e-mail address
 

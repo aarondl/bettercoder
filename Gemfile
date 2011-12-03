@@ -1,6 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.1.0'
+gem 'mongrel', '1.2.0.pre2'
 
 gem 'haml'
 gem 'haml-rails'
@@ -11,16 +12,25 @@ gem 'mongoid'
 gem 'bson_ext'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 
-gem 'rspec-rails', :group => [:development, :test]
-
 group :test do
+  gem 'spork'
+
+  gem 'rspec-rails'
+  gem 'mongoid-rspec'
+
   gem 'cucumber-rails'
   gem 'database_cleaner'
-  gem 'mongoid-rspec'
-  gem 'pickle'
+
   gem 'factory_girl_rails'
+
   gem 'capybara'
-  gem 'spork'
+  gem 'show_me_the_cookies'
+  gem 'pickle'
+
+  gem 'guard'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'rb-inotify'
 end
 
 # Gems used only for assets and not required
